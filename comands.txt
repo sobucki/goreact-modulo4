@@ -1,3 +1,7 @@
 create-react-app modulo4
 
+yarn add eslint -D
+yarn add babel-eslint -D
+-----
 yarn add styled-compnents
+
