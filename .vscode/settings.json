@@ -1,0 +1,6 @@
+{
+  "editor.parameterHints.enabled": false,
+  "editor.wordBasedSuggestions": false,
+  "editor.suggestSelection": "first",
+  "editor.suggestOnTriggerCharacters": false
+}
