@@ -6,3 +6,5 @@ yarn add babel-eslint -D
 yarn add styled-components
 
 yarn add rc-slider
+
+yarn add react-router-dom
