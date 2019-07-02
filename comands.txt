@@ -9,3 +9,17 @@ yarn add rc-slider
 
 yarn add react-router-dom
 yarn add reactotron-react-js reactotron-redux reactotron-redux-saga redux redux-saga react-redux
+
+yarn add axios
+yarn add prop-types
+-----
+Instalação do json-server
+https://github.com/typicode/json-server
+yarn global add json-server
+
+json-server server.json -p 3001 -w -d 500
+
+-p -> redireciona a porta
+-w -> watching as alterações
+-d -> delay
+-----
