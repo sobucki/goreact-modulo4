@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
@@ -27,6 +28,7 @@ class Sidebar extends Component {
   }
 
   render() {
+    const { playlists } = this.props;
     return (
       <Container>
         <div>
@@ -67,7 +69,7 @@ class Sidebar extends Component {
             <li>
               <span>PLAYLISS</span>
             </li>
-            {this.props.playlists.map(playlist => (
+            {playlists.map(playlist => (
               <li key={playlist.id}>
                 <Link to={`playlists/${playlist.id}`}>{playlist.title}</Link>
               </li>
