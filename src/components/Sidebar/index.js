@@ -9,6 +9,8 @@ import { Creators as PlaylistsActions } from '../../store/ducks/playlists';
 
 import { Container, NewPlaylist, Nav } from './styles';
 
+import Loading from '../Loding';
+
 import AddPlaylistIcon from '../../assets/images/add_playlist.svg';
 
 class Sidebar extends Component {
@@ -20,6 +22,7 @@ class Sidebar extends Component {
         title: PropTypes.string,
       }),
     ).isRequired,
+    loading: PropTypes.bool.isRequired,
   };
 
   componentDidMount() {
@@ -28,7 +31,7 @@ class Sidebar extends Component {
   }
 
   render() {
-    const { playlists } = this.props;
+    const { playlists, loading } = this.props;
     return (
       <Container>
         <div>
@@ -68,6 +71,7 @@ class Sidebar extends Component {
           <Nav>
             <li>
               <span>PLAYLISS</span>
+              {loading && <Loading />}
             </li>
             {playlists.map(playlist => (
               <li key={playlist.id}>
@@ -87,6 +91,7 @@ class Sidebar extends Component {
 
 const mapStateToProps = state => ({
   playlists: state.playlists.data,
+  loading: state.playlists.loading,
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators(PlaylistsActions, dispatch);
