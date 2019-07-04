@@ -12,7 +12,8 @@ export const Container = styled.div`
 export const Current = styled.div`
   display: flex;
   align-items: center;
-
+  width: 150px;
+  min-width: 150px;
   img {
     width: 56px;
     height: 56px;
