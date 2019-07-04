@@ -12,6 +12,7 @@ yarn add reactotron-react-js reactotron-redux reactotron-redux-saga redux redux-
 
 yarn add axios
 yarn add prop-types
+yarn add react-sound
 -----
 Instalação do json-server
 https://github.com/typicode/json-server
