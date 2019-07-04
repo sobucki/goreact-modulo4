@@ -113,7 +113,7 @@ músicas
                 <SongItem
                   key={song.id}
                   onClick={() => this.setState({ selectedSong: song.id })}
-                  onDoubleClick={() => loadSong(song)}
+                  onDoubleClick={() => loadSong(song, playlistDetails.songs)}
                   selected={selectedSong === song.id}
                   playing={currentSong && currentSong.id === song.id}
                 >
