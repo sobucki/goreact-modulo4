@@ -36,6 +36,7 @@ class Playlist extends Component {
           file: PropTypes.string,
           thumbnail: PropTypes.string,
           playlistId: PropTypes.number,
+          duration: PropTypes.string,
         }),
       ),
     }).isRequired,
@@ -123,7 +124,7 @@ músicas
                   <td>{song.title}</td>
                   <td>{song.author}</td>
                   <td>{song.album}</td>
-                  <td>5:48</td>
+                  <td>{song.duration}</td>
                 </SongItem>
               ))
             )}

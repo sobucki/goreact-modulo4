@@ -149,16 +149,21 @@ function msToTime(duration) {
   return `${minutes}:${seconds}`;
 }
 
+function parseProgress(position, duration) {
+  if (!position) return 0;
+
+  return parseInt(position * (1000 / duration), 10);
+}
+
 const mapStateToProps = state => ({
   player: state.player,
   position: msToTime(state.player.position),
   duration: msToTime(state.player.duration),
   positionShown: msToTime(state.player.positionShown),
-  progress:
-    parseInt(
-      (state.player.positionShown || state.player.position) * (1000 / state.player.duration),
-      10,
-    ) || 0,
+  progress: parseProgress(
+    state.player.positionShown || state.player.position,
+    state.player.duration,
+  ),
   volume: state.player.volume,
 });
 
